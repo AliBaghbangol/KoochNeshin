@@ -1,0 +1,11 @@
+{
+  "name": "trip-sync-service",
+  "version": "1.0.0",
+  "description": "KOCHNESHIN trip-room realtime relay (socket.io) — chat, expenses, settlements, checklist, polls, presence, typing",
+  "scripts": {
+    "dev": "bun --hot index.ts"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.3"
+  }
+}

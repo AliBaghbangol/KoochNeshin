@@ -1,0 +1,587 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: Vazirmatn, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, monospace;
+  --font-display: Vazirmatn, ui-sans-serif, system-ui, sans-serif;
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  /* Brand palette */
+  --color-emerald: var(--emerald);
+  --color-emerald-dark: var(--emerald-dark);
+  --color-emerald-light: var(--emerald-light);
+  --color-sunset: var(--sunset);
+  --color-sunset-dark: var(--sunset-dark);
+  --color-sunset-light: var(--sunset-light);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-cream: var(--cream);
+  --color-forest: var(--forest);
+  --color-sand: var(--sand);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 16px);
+
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 3s ease-in-out infinite;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-gradient: gradient 8s ease infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+/* Breathing gold halo for the back-to-top finish reward */
+@keyframes shimmer-halo {
+  0%, 100% { transform: scale(0.92); opacity: 0.55; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px -5px var(--gold); opacity: 0.85; }
+  50% { box-shadow: 0 0 35px 0px var(--gold); opacity: 1; }
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+:root {
+  --radius: 0.875rem;
+  --background: #f7f3ec;
+  --foreground: #1a2e26;
+  --card: #ffffff;
+  --card-foreground: #1a2e26;
+  --popover: #ffffff;
+  --popover-foreground: #1a2e26;
+  --primary: #0f6b4a;
+  --primary-foreground: #f7f3ec;
+  --secondary: #efe8da;
+  --secondary-foreground: #1a2e26;
+  --muted: #ece4d4;
+  --muted-foreground: #6b7a6f;
+  --accent: #e8622c;
+  --accent-foreground: #ffffff;
+  --destructive: #c0392b;
+  --border: #e0d6c2;
+  --input: #e0d6c2;
+  --ring: #0f6b4a;
+  --chart-1: #0f6b4a;
+  --chart-2: #e8622c;
+  --chart-3: #d9a94e;
+  --chart-4: #2d8f6f;
+  --chart-5: #b8542a;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a2e26;
+  --sidebar-primary: #0f6b4a;
+  --sidebar-primary-foreground: #f7f3ec;
+  --sidebar-accent: #efe8da;
+  --sidebar-accent-foreground: #1a2e26;
+  --sidebar-border: #e0d6c2;
+  --sidebar-ring: #0f6b4a;
+
+  /* Brand */
+  --emerald: #0f6b4a;
+  --emerald-dark: #0a4f37;
+  --emerald-light: #2d8f6f;
+  --sunset: #e8622c;
+  --sunset-dark: #c04e1f;
+  --sunset-light: #f08a5d;
+  --gold: #d9a94e;
+  --gold-light: #e8c878;
+  --cream: #f7f3ec;
+  --forest: #0b1f1a;
+  --sand: #d4c4a0;
+}
+
+.dark {
+  --background: #0b1f1a;
+  --foreground: #f7f3ec;
+  --card: #122b22;
+  --card-foreground: #f7f3ec;
+  --popover: #122b22;
+  --popover-foreground: #f7f3ec;
+  --primary: #2d8f6f;
+  --primary-foreground: #0b1f1a;
+  --secondary: #1a3a2e;
+  --secondary-foreground: #f7f3ec;
+  --muted: #1a3a2e;
+  --muted-foreground: #9bb0a3;
+  --accent: #f08a5d;
+  --accent-foreground: #0b1f1a;
+  --destructive: #e74c3c;
+  --border: #1f4536;
+  --input: #1f4536;
+  --ring: #2d8f6f;
+  --chart-1: #2d8f6f;
+  --chart-2: #f08a5d;
+  --chart-3: #e8c878;
+  --chart-4: #4caf85;
+  --chart-5: #d9a94e;
+  --sidebar: #122b22;
+  --sidebar-foreground: #f7f3ec;
+  --sidebar-primary: #2d8f6f;
+  --sidebar-primary-foreground: #0b1f1a;
+  --sidebar-accent: #1a3a2e;
+  --sidebar-accent-foreground: #f7f3ec;
+  --sidebar-border: #1f4536;
+  --sidebar-ring: #2d8f6f;
+
+  --emerald: #2d8f6f;
+  --emerald-dark: #0f6b4a;
+  --emerald-light: #4caf85;
+  --sunset: #f08a5d;
+  --sunset-dark: #e8622c;
+  --sunset-light: #ffa477;
+  --gold: #e8c878;
+  --gold-light: #f5dba8;
+  --cream: #f7f3ec;
+  --forest: #06120e;
+  --sand: #5a5340;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv01";
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  ::selection {
+    background-color: var(--emerald);
+    color: var(--cream);
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+/* ============================================================
+   Responsive & Mobile-only adjustments
+   (Desktop rendering is intentionally untouched)
+   ============================================================ */
+
+/* NOTE: global vertical scroll-snap was intentionally removed (v17 cleanup).
+   Home desktop snapping is owned by the dedicated <SnapScroll /> component;
+   horizontal carousels own their snap-x scrollers. No global snap-type. */
+
+/* Prevent accidental horizontal overflow on touch devices (clip keeps sticky working) */
+@media (max-width: 1023px) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* iOS: prevent auto-zoom when focusing inputs (desktop unaffected) */
+@media (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+@utility mb-safe {
+  margin-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ===== Custom Cursor ===== */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--emerald);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background 0.2s;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--emerald);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, border-color 0.3s, background 0.3s;
+  opacity: 0.5;
+}
+
+.cursor-dot.hovering {
+  width: 16px;
+  height: 16px;
+  background: var(--gold);
+}
+
+.cursor-ring.hovering {
+  width: 50px;
+  height: 50px;
+  border-color: var(--gold);
+  background: rgba(217, 169, 78, 0.1);
+  opacity: 1;
+}
+
+.cursor-ring.clicking {
+  width: 28px;
+  height: 28px;
+  border-color: var(--sunset);
+  background: rgba(232, 98, 44, 0.15);
+}
+
+@media (hover: none) or (pointer: coarse) {
+  .cursor-dot, .cursor-ring { display: none; }
+  * { cursor: auto !important; }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .dark .glass {
+    background: rgba(18, 43, 34, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-dark {
+    background: rgba(11, 31, 26, 0.5);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .text-gradient-emerald {
+    background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-light) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-sunset {
+    background: linear-gradient(135deg, var(--sunset) 0%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .shimmer-bg {
+    background: linear-gradient(
+      90deg,
+      var(--muted) 0%,
+      var(--secondary) 50%,
+      var(--muted) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s linear infinite;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .custom-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--emerald-light) transparent;
+  }
+  .custom-scroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--emerald-light);
+    border-radius: 9999px;
+  }
+  .glow-gold {
+    box-shadow: 0 0 30px -8px var(--gold);
+  }
+  .glow-emerald {
+    box-shadow: 0 0 30px -8px var(--emerald);
+  }
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  }
+  .animate-marquee {
+    animation: var(--animate-marquee);
+  }
+}
+
+/* ============================================================
+   Print stylesheet (blog article) — screen rendering untouched.
+   Triggered by the article's print button (window.print()).
+   ============================================================ */
+@media print {
+  /* Hide app chrome & non-article sections */
+  header,
+  nav,
+  footer,
+  aside,
+  .lg\:hidden,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Reading progress bar is fixed-position noise on paper */
+  .z-\[60\] {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  /* Article takes the full width, no card borders/shadows */
+  article {
+    max-width: 100% !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Reveal link URLs after inline links on paper */
+  article p a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 11px;
+    color: #555;
+    word-break: break-all;
+  }
+
+  /* Avoid awkward page breaks inside content blocks */
+  h2,
+  blockquote,
+  figure,
+  li {
+    break-inside: avoid;
+  }
+  h2 {
+    break-after: avoid;
+  }
+
+  /* Images keep their color and fit the page */
+  img {
+    max-width: 100% !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* ---- Checkout receipt mode -------------------------------------------
+     Activated by <body class="print-receipt-mode"> (set just before
+     window.print() from the ConfirmStep «چاپ رسید» button and removed
+     after the dialog closes). Uses the visibility trick so the receipt
+     card keeps its layout but everything else stays unprinted. */
+  body.print-receipt-mode * {
+    visibility: hidden !important;
+  }
+  body.print-receipt-mode #receipt-card,
+  body.print-receipt-mode #receipt-card * {
+    visibility: visible !important;
+  }
+  body.print-receipt-mode #receipt-card {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    max-height: none !important;
+    box-shadow: none !important;
+  }
+  /* The item list must not clip on paper */
+  body.print-receipt-mode #receipt-card .max-h-56 {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+/* ---- Live-notification countdown ring ---------------------------------
+   The ring around the toast icon drains over the toast's lifetime
+   (r=20 → circumference ≈ 125.7). Paused via animation-play-state
+   whenever the toast is hovered or held, in sync with the JS timer. */
+@keyframes toast-ring {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 125.7;
+  }
+}
+
+/* ---- 404 night-desert scene -------------------------------------------
+   Twinkling stars, marching caravan-trail dashes, pulsing tent glow,
+   rising smoke and a floating compass — all lightweight CSS loops. */
+@keyframes koch-twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+.koch-star {
+  animation: koch-twinkle 3.2s ease-in-out infinite;
+}
+
+@keyframes koch-dash-march {
+  to { stroke-dashoffset: -40; }
+}
+.koch-dash {
+  animation: koch-dash-march 2.4s linear infinite;
+}
+
+@keyframes koch-glow-pulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.koch-tent-glow {
+  animation: koch-glow-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes koch-smoke-rise {
+  0% { transform: translateY(0) scale(0.7); opacity: 0; }
+  25% { opacity: 0.8; }
+  100% { transform: translateY(-16px) translateX(3px) scale(1.25); opacity: 0; }
+}
+.koch-smoke {
+  animation: koch-smoke-rise 2.6s ease-out infinite;
+}
+
+@keyframes koch-soft-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.koch-float {
+  animation: koch-soft-float 3.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .koch-star, .koch-dash, .koch-tent-glow, .koch-smoke, .koch-float {
+    animation: none;
+  }
+}
+
+/* ---- KochLoader (themed route loading) --------------------------------- */
+@keyframes koch-traveller-move {
+  0% { transform: translateX(300px) translateY(140px); opacity: 0; }
+  8% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateX(10px) translateY(152px); opacity: 0; }
+}
+.koch-traveller {
+  animation: koch-traveller-move 2.6s linear infinite;
+}
+
+@keyframes koch-dot-bounce {
+  0%, 70%, 100% { transform: translateY(0); opacity: 0.5; }
+  35% { transform: translateY(-4px); opacity: 1; }
+}
+
+@keyframes koch-progress-slide {
+  0% { transform: translateX(200%); }
+  100% { transform: translateX(-200%); }
+}
+.koch-progress {
+  animation: koch-progress-slide 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .koch-traveller, .koch-progress { animation: none; }
+}
