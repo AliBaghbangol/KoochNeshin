@@ -52,8 +52,7 @@ const CATEGORY_HEROES: Record<
     title: "کوهنوردی",
     subtitle: "صعود به بام ایران، تجربه‌ای فراموش‌نشدنی",
     gradient: "from-emerald via-emerald-dark to-forest",
-    image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&h=900&fit=crop&q=80",
+    image: "/images/tours/mountain-2.jpg",
     accent: "text-gold",
   },
   forest: {
@@ -61,8 +60,7 @@ const CATEGORY_HEROES: Record<
     title: "جنگل‌گردی",
     subtitle: "در میان سبزی جنگل‌های هیرکانی",
     gradient: "from-emerald-light via-emerald to-emerald-dark",
-    image:
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&h=900&fit=crop&q=80",
+    image: "/images/tours/forest-1.jpg",
     accent: "text-cream",
   },
   desert: {
@@ -70,8 +68,7 @@ const CATEGORY_HEROES: Record<
     title: "بیابان‌گردی",
     subtitle: "شب‌های پرستاره و کرت‌های بی‌نظیر کویر",
     gradient: "from-sunset via-sunset-dark to-forest",
-    image:
-      "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1600&h=900&fit=crop&q=80",
+    image: "/images/tours/desert-1.jpg",
     accent: "text-gold",
   },
   coastal: {
@@ -79,8 +76,7 @@ const CATEGORY_HEROES: Record<
     title: "سفرهای ساحلی",
     subtitle: "آبی بی‌انتها و جزایر خلیج فارس",
     gradient: "from-emerald-light via-emerald to-sunset",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&h=900&fit=crop&q=80",
+    image: "/images/tours/coastal-1.jpg",
     accent: "text-cream",
   },
   historical: {
@@ -88,8 +84,7 @@ const CATEGORY_HEROES: Record<
     title: "تاریخ و فرهنگ",
     subtitle: "سفری به عمق تاریخ ایران باستان",
     gradient: "from-gold via-sunset to-forest",
-    image:
-      "https://images.unsplash.com/photo-1549887534-1541e9326642?w=1600&h=900&fit=crop&q=80",
+    image: "/images/tours/historical-1.jpg",
     accent: "text-cream",
   },
 };

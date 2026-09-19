@@ -6,7 +6,7 @@
  *  - Images: stale-while-revalidate (small, immutable-ish)
  *  - NEVER cache: JS, CSS, JSON, API, manifest (keeps Turbopack HMR safe)
  */
-const VERSION = "koch-sw-v5-brand-mark";
+const VERSION = "koch-sw-v6-real-photos";
 const OFFLINE_URL = "/offline.html";
 const PRECACHE = [OFFLINE_URL, "/icon-192.png", "/icon-512.png", "/logo.svg"];
 

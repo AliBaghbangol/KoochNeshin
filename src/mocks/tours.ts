@@ -1,33 +1,32 @@
 import type { Tour, Destination, Review } from "@/types";
 import { leaders } from "./leaders";
 
-// Curated Unsplash photo IDs for each theme
+// Real photos of the actual Iranian destinations — self-hosted (v31)
 const IMG = {
   mountain: [
-    "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=1200&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1200&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&h=800&fit=crop&q=80",
+    "/images/tours/mountain-1.jpg",
+    "/images/tours/mountain-2.jpg",
+    "/images/tours/mountain-3.jpg",
   ],
   forest: [
-    "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1200&h=800&fit=crop&q=80",
+    "/images/tours/forest-1.jpg",
+    "/images/tours/forest-2.jpg",
+    "/images/tours/forest-3.jpg",
   ],
   desert: [
-    "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1200&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1547234935-80c7145ec969?w=1200&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&h=800&fit=crop&q=80",
+    "/images/tours/desert-1.jpg",
+    "/images/tours/desert-2.jpg",
+    "/images/tours/desert-3.jpg",
   ],
   coastal: [
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1200&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=1200&h=800&fit=crop&q=80",
+    "/images/tours/coastal-1.jpg",
+    "/images/tours/coastal-2.jpg",
+    "/images/tours/coastal-3.jpg",
   ],
   historical: [
-    "https://images.unsplash.com/photo-1549887534-1541e9326642?w=1200&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1200&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=1200&h=800&fit=crop&q=80",
+    "/images/tours/historical-1.jpg",
+    "/images/tours/historical-2.jpg",
+    "/images/tours/historical-3.jpg",
   ],
 };
 

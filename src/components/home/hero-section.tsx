@@ -5,27 +5,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, MapPin } from "lucide-react";
 import { useGo } from "@/lib/use-go";
 
+// Real photos of the actual Iranian destinations — self-hosted (v31)
 const SLIDES = [
   {
-    url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&h=1080&fit=crop&q=85",
+    url: "/images/hero/damavand.jpg",
     name: "دماوند",
     province: "مازندران",
     caption: "بام ایران",
   },
   {
-    url: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&h=1080&fit=crop&q=85",
+    url: "/images/hero/abr-forest.jpg",
     name: "جنگل ابر",
     province: "سمنان",
     caption: "بحر مه",
   },
   {
-    url: "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1920&h=1080&fit=crop&q=85",
+    url: "/images/hero/lut-desert.jpg",
     name: "دشت لوت",
     province: "کرمان",
     caption: "ستاره‌های کویر",
   },
   {
-    url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&h=1080&fit=crop&q=85",
+    url: "/images/hero/qeshm-stars-valley.jpg",
     name: "قشم",
     province: "هرمزگان",
     caption: "جزیره خورشید",

@@ -2,30 +2,30 @@ import type { EquipmentProduct } from "@/types";
 
 const IMG = {
   tent: [
-    "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1517824806704-9040b037703b?w=800&h=800&fit=crop&q=80",
+    "/images/equipment/tent-1.jpg",
+    "/images/equipment/tent-2.jpg",
   ],
   backpack: [
-    "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=800&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=800&h=800&fit=crop&q=80",
+    "/images/equipment/backpack-1.jpg",
+    "/images/equipment/backpack-2.jpg",
   ],
   boots: [
-    "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=800&h=800&fit=crop&q=80",
+    "/images/equipment/boots-1.jpg",
   ],
   sleeping: [
-    "https://images.unsplash.com/photo-1504280317859-5f5ee45cd225?w=800&h=800&fit=crop&q=80",
+    "/images/equipment/sleeping-1.jpg",
   ],
   jacket: [
-    "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800&h=800&fit=crop&q=80",
+    "/images/equipment/jacket-1.jpg",
   ],
   stove: [
-    "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=800&h=800&fit=crop&q=80",
+    "/images/equipment/stove-1.jpg",
   ],
   headlamp: [
-    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=800&fit=crop&q=80",
+    "/images/equipment/headlamp-1.jpg",
   ],
   rope: [
-    "https://images.unsplash.com/photo-1486911278844-a81c5267e227?w=800&h=800&fit=crop&q=80",
+    "/images/equipment/rope-1.jpg",
   ],
 };
 

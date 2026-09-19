@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  // Turbopack build OOM-kills in ~2GB sandboxes — eslint already runs
+  // separately via `bun run lint`, so keep the build lean.
+  eslint: { ignoreDuringBuilds: true },
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,

@@ -26,21 +26,21 @@ export type BlogBlock =
 
 const IMG = {
   mountain: [
-    "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&h=700&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=1200&h=700&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1200&h=700&fit=crop&q=80",
+    "/images/tours/mountain-2.jpg",
+    "/images/tours/mountain-3.jpg",
+    "/images/tours/mountain-1.jpg",
   ],
   desert: [
-    "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1200&h=700&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1547234935-80c7145ec969?w=1200&h=700&fit=crop&q=80",
+    "/images/tours/desert-1.jpg",
+    "/images/tours/desert-2.jpg",
   ],
   forest: [
-    "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&h=700&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=700&fit=crop&q=80",
+    "/images/tours/forest-1.jpg",
+    "/images/tours/forest-3.jpg",
   ],
-  backpack: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1200&h=700&fit=crop&q=80",
-  persepolis: "https://images.unsplash.com/photo-1549887534-1541e9326642?w=1200&h=700&fit=crop&q=80",
-  qeshm: "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1200&h=700&fit=crop&q=80",
+  backpack: "/images/equipment/backpack-1.jpg",
+  persepolis: "/images/tours/historical-1.jpg",
+  qeshm: "/images/tours/coastal-1.jpg",
 };
 
 const AUTHOR_AVATARS = [

@@ -67,9 +67,16 @@ export function SmartImage({
   const [status, setStatus] = React.useState<
     "loading" | "loaded" | "error"
   >("loading");
+  const imgRef = React.useRef<HTMLImageElement | null>(null);
 
   React.useEffect(() => {
     setStatus("loading");
+    // Local/cached images can finish loading BEFORE hydration attaches the
+    // onLoad listener — check `complete` so they never stay stuck invisible.
+    const el = imgRef.current;
+    if (el && el.complete) {
+      setStatus(el.naturalWidth > 0 ? "loaded" : "error");
+    }
   }, [src]);
 
   const cfg = FALLBACKS[fallback];
@@ -77,6 +84,7 @@ export function SmartImage({
 
   const imgEl = (
     <img
+      ref={imgRef}
       src={src}
       alt={alt}
       loading="lazy"

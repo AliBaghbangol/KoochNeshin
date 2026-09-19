@@ -58,8 +58,7 @@ const MOCK_CALENDAR_BOOKINGS: CalendarBooking[] = [
     id: "cb1",
     tourId: "t1",
     title: "صعود فصلی قله دماوند",
-    image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&h=300&fit=crop&q=80",
+    image: "/images/tours/mountain-2.jpg",
     date: isoOffsetDays(3),
     participants: 2,
     destination: "قله دماوند",
@@ -70,8 +69,7 @@ const MOCK_CALENDAR_BOOKINGS: CalendarBooking[] = [
     id: "cb2",
     tourId: "t4",
     title: "کوچ ابری جنگل ابر",
-    image:
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&h=300&fit=crop&q=80",
+    image: "/images/tours/forest-1.jpg",
     date: isoOffsetDays(9),
     participants: 3,
     destination: "جنگل ابر",
@@ -82,8 +80,7 @@ const MOCK_CALENDAR_BOOKINGS: CalendarBooking[] = [
     id: "cb3",
     tourId: "t10",
     title: "تخت جمشید و نقش رستم",
-    image:
-      "https://images.unsplash.com/photo-1549887534-1541e9326642?w=400&h=300&fit=crop&q=80",
+    image: "/images/tours/historical-1.jpg",
     date: isoOffsetDays(16),
     participants: 4,
     destination: "تخت جمشید",
@@ -94,8 +91,7 @@ const MOCK_CALENDAR_BOOKINGS: CalendarBooking[] = [
     id: "cb4",
     tourId: "t6",
     title: "کویر لوت — ستارگان و کرت‌ها",
-    image:
-      "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=400&h=300&fit=crop&q=80",
+    image: "/images/tours/desert-1.jpg",
     date: isoOffsetDays(34),
     participants: 2,
     destination: "دشت لوت",

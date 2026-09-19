@@ -16,9 +16,7 @@ function draftToTour(d: DraftTour, leaderId: string): Tour {
   const lid = d.leaderId ?? leaderId; // prefer draft's own leaderId
   const images = d.imageUrl
     ? [d.imageUrl]
-    : [
-        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&h=800&fit=crop&q=80",
-      ];
+    : ["/images/tours/mountain-2.jpg"];
 
   return {
     id: d.id,

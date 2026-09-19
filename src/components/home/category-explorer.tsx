@@ -29,8 +29,7 @@ const CATEGORIES: {
     icon: Mountain,
     gradient: "from-emerald to-emerald-dark",
     accent: "text-gold",
-    image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=600&fit=crop&q=80",
+    image: "/images/tours/mountain-2.jpg",
   },
   {
     id: "forest",
@@ -38,8 +37,7 @@ const CATEGORIES: {
     icon: TreePine,
     gradient: "from-emerald-light to-emerald",
     accent: "text-cream",
-    image:
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&h=600&fit=crop&q=80",
+    image: "/images/tours/forest-1.jpg",
   },
   {
     id: "desert",
@@ -47,8 +45,7 @@ const CATEGORIES: {
     icon: Tent,
     gradient: "from-sunset to-sunset-dark",
     accent: "text-cream",
-    image:
-      "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=800&h=600&fit=crop&q=80",
+    image: "/images/tours/desert-1.jpg",
   },
   {
     id: "coastal",
@@ -56,8 +53,7 @@ const CATEGORIES: {
     icon: Palmtree,
     gradient: "from-emerald-light to-sunset",
     accent: "text-cream",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop&q=80",
+    image: "/images/tours/coastal-1.jpg",
   },
   {
     id: "historical",
@@ -65,8 +61,7 @@ const CATEGORIES: {
     icon: Landmark,
     gradient: "from-gold to-sunset",
     accent: "text-forest",
-    image:
-      "https://images.unsplash.com/photo-1549887534-1541e9326642?w=800&h=600&fit=crop&q=80",
+    image: "/images/tours/historical-1.jpg",
   },
 ];
 

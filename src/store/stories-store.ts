@@ -44,11 +44,10 @@ const SEED: TravelStory[] = [
     authorName: "سارا کریمی",
     authorAvatar:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=faces&q=80",
-    coverImageUrl:
-      "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&h=600&fit=crop&q=80",
+    coverImageUrl: "/images/tours/mountain-1.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&h=600&fit=crop&q=80",
+      "/images/tours/mountain-1.jpg",
+      "/images/tours/mountain-2.jpg",
     ],
     caption:
       "صبحانه روی ابرها. بالاخره به قله رسیدیم — خستگی‌ام را فراموش کردم.",
@@ -68,10 +67,9 @@ const SEED: TravelStory[] = [
     authorName: "حسین موسوی",
     authorAvatar:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=faces&q=80",
-    coverImageUrl:
-      "https://images.unsplash.com/photo-1532978879514-6cae1cdf5458?w=800&h=600&fit=crop&q=80",
+    coverImageUrl: "/images/hero/lut-desert.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1532978879514-6cae1cdf5458?w=800&h=600&fit=crop&q=80",
+      "/images/hero/lut-desert.jpg",
     ],
     caption: "شبی پر از ستاره در قلب کویر لوت. صحنه‌ای که با هیچ دوربینی نمی‌گنجد.",
     location: "دشت لوت، کرمان",
@@ -90,10 +88,9 @@ const SEED: TravelStory[] = [
     authorName: "نگار محمدی",
     authorAvatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=faces&q=80",
-    coverImageUrl:
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&h=600&fit=crop&q=80",
+    coverImageUrl: "/images/tours/forest-1.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&h=600&fit=crop&q=80",
+      "/images/tours/forest-1.jpg",
     ],
     caption: "مه بین درخت‌ها مثل فیلم بود. یک روز کامل گشتیم.",
     location: "جنگل ابر، گلستان",
@@ -134,7 +131,7 @@ export const useStories = create<StoriesState>()(
           authorName: author.name,
           authorAvatar: author.avatar,
           coverImageUrl:
-            d.coverImageUrl ?? d.gallery[0] ?? "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop&q=80",
+            d.coverImageUrl ?? d.gallery[0] ?? "/images/tours/forest-3.jpg",
           gallery: d.gallery,
           caption: d.caption,
           location: d.location,
